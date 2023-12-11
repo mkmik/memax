@@ -1,0 +1,19 @@
+[package]
+name = "memax"
+version = "0.1.0"
+edition = "2021"
+description = "Return total available system memory"
+authors = ["Marko Mikulicic <mmikulicic@gmail.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/mkmik/memax"
+documentation = "https://docs.rs/memax"
+keywords = ["memory", "ram", "cgroups", "limits"]
+categories = ["hardware-support"]
+
+[dependencies]
+sys-info = "0.9.1"
+thiserror = "1.0.50"
+
+
+[target.'cfg(target_os = "linux")'.dependencies]
+cgroupfs = "0.7.1"
